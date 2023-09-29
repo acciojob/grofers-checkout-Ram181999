@@ -20,7 +20,7 @@ const getSum = () => {
   // Create a new row for displaying the total price
   const table = document.querySelector('table');
   const newRow = table.insertRow(-1); // -1 inserts at the end of the table
- newRow.id =ans; // Assign an ID to the newRow
+ newRow.id ="ans"; // Assign an ID to the newRow(before giving id i got error to give id)
 	const cell1 = newRow.insertCell(0);
   
 
