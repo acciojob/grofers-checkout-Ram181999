@@ -4,6 +4,27 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 //Add your code here
+	// Get all elements with class "price"
+  const priceElements = document.querySelectorAll('.price');
+
+  let totalPrice = 0;
+
+  // Loop through the price elements and sum up the prices
+  priceElements.forEach(priceElement => {
+    const price = parseFloat(priceElement.textContent);
+    if (!isNaN(price)) {
+      totalPrice += price;
+    }
+  });
+
+  // Create a new row for displaying the total price
+  const table = document.querySelector('table');
+  const newRow = table.insertRow(-1); // -1 inserts at the end of the table
+  const cell1 = newRow.insertCell(0);
+  
+
+  cell1.textContent = totalPrice;
+  
   
 };
 
