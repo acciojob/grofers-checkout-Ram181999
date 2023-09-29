@@ -20,7 +20,8 @@ const getSum = () => {
   // Create a new row for displaying the total price
   const table = document.querySelector('table');
   const newRow = table.insertRow(-1); // -1 inserts at the end of the table
-  const cell1 = newRow.insertCell(0);
+ newRow.id =ans; // Assign an ID to the newRow
+	const cell1 = newRow.insertCell(0);
   
 
   cell1.textContent = totalPrice;
